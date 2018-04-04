@@ -1,6 +1,6 @@
 {
-  "name": "ngx-flickity",
-  "version": "0.0.8",
+  "name": "ngx-flickity-plus",
+  "version": "0.0.1",
   "description": "Angular2 component for https://flickity.metafizzy.co/",
   "main": "dist/index.js",
   "dependencies": {
@@ -31,7 +31,7 @@
   "typings": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geex-arts/ngx-flickity.git"
+    "url": "git+git@github.com:nhaward/ngx-flickity.git"
   },
   "keywords": [
     "angular2",
@@ -42,7 +42,7 @@
   "author": "Denis Kildishev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/geex-arts/ngx-flickity/issues"
+    "url": "https://github.com/nhaward/ngx-flickity/issues"
   },
-  "homepage": "https://github.com/geex-arts/ngx-flickity"
+  "homepage": "https://github.com/nhaward/ngx-flickity"
 }

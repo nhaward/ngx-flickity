@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var flickity_directive_1 = require("../flickity/flickity.directive");
-var FlickityChildDirective = (function () {
+var FlickityChildDirective = /** @class */ (function () {
     function FlickityChildDirective(el, parent) {
         this.el = el;
         this.parent = parent;
@@ -13,18 +13,18 @@ var FlickityChildDirective = (function () {
         }
         this.parent.append(this.el.nativeElement);
     };
+    FlickityChildDirective.decorators = [
+        { type: core_1.Directive, args: [{ selector: '[flickityChild]' },] },
+    ];
+    /** @nocollapse */
+    FlickityChildDirective.ctorParameters = function () { return [
+        { type: core_1.ElementRef, },
+        { type: flickity_directive_1.FlickityDirective, decorators: [{ type: core_1.Optional }, { type: core_1.Host },] },
+    ]; };
+    FlickityChildDirective.propDecorators = {
+        'flickityChild': [{ type: core_1.Input },],
+    };
     return FlickityChildDirective;
 }());
-FlickityChildDirective.decorators = [
-    { type: core_1.Directive, args: [{ selector: '[flickityChild]' },] },
-];
-/** @nocollapse */
-FlickityChildDirective.ctorParameters = function () { return [
-    { type: core_1.ElementRef, },
-    { type: flickity_directive_1.FlickityDirective, decorators: [{ type: core_1.Optional }, { type: core_1.Host },] },
-]; };
-FlickityChildDirective.propDecorators = {
-    'flickityChild': [{ type: core_1.Input },],
-};
 exports.FlickityChildDirective = FlickityChildDirective;
 //# sourceMappingURL=flickity-child.directive.js.map
