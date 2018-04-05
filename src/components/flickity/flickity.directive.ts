@@ -152,6 +152,18 @@ export class FlickityDirective implements AfterContentInit, OnDestroy {
     this.flkty.prepend(el);
   }
 
+  removeByIndex(slideIndex) {
+    if (!this.flkty) {
+      return;
+    }
+    const elements = this.flkty.getCellElements();
+    const element = elements[slideIndex];
+
+    if (element) {
+      this.flkty.remove(element);
+    }
+  }
+
   private updateElements() {
     if (!this.flkty || this.appendElements.length == 0) {
       return;

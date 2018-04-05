@@ -28,6 +28,7 @@ export declare class FlickityDirective implements AfterContentInit, OnDestroy {
     readonly slides: number;
     append(el: HTMLElement): void;
     prepend(el: HTMLElement): void;
+    removeByIndex(slideIndex: any): void;
     private updateElements();
     select(index: number, isWrapped?: boolean, isInstant?: boolean): void;
 }

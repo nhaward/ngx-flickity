@@ -122,6 +122,16 @@ var FlickityDirective = /** @class */ (function () {
     FlickityDirective.prototype.prepend = function (el) {
         this.flkty.prepend(el);
     };
+    FlickityDirective.prototype.removeByIndex = function (slideIndex) {
+        if (!this.flkty) {
+            return;
+        }
+        var elements = this.flkty.getCellElements();
+        var element = elements[slideIndex];
+        if (element) {
+            this.flkty.remove(element);
+        }
+    };
     FlickityDirective.prototype.updateElements = function () {
         var _this = this;
         if (!this.flkty || this.appendElements.length == 0) {
