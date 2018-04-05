@@ -145,6 +145,7 @@ export class FlickityDirective implements AfterContentInit, OnDestroy {
 
   append(el: HTMLElement) {
     this.appendElements.push(el);
+    this.updateElements();
   }
 
   prepend(el: HTMLElement) {
@@ -156,6 +157,7 @@ export class FlickityDirective implements AfterContentInit, OnDestroy {
       return;
     }
 
+    this.appendElements.forEach(el => this.flkty.append(el));
     this.appendElements = [];
 
     this.resize();

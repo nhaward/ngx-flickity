@@ -117,6 +117,7 @@ var FlickityDirective = /** @class */ (function () {
     });
     FlickityDirective.prototype.append = function (el) {
         this.appendElements.push(el);
+        this.updateElements();
     };
     FlickityDirective.prototype.prepend = function (el) {
         this.flkty.prepend(el);
@@ -126,6 +127,7 @@ var FlickityDirective = /** @class */ (function () {
         if (!this.flkty || this.appendElements.length == 0) {
             return;
         }
+        this.appendElements.forEach(function (el) { return _this.flkty.append(el); });
         this.appendElements = [];
         this.resize();
         this.childrenUpdated.emit();
