@@ -7,7 +7,7 @@ var FlickityChildDirective = /** @class */ (function () {
         this.el = el;
         this.parent = parent;
     }
-    FlickityChildDirective.prototype.ngOnInit = function () {
+    FlickityChildDirective.prototype.ngAfterContentInit = function () {
         if (!this.parent) {
             return;
         }

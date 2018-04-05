@@ -1,9 +1,9 @@
-import { ElementRef, OnInit } from '@angular/core';
+import { ElementRef, AfterContentInit } from '@angular/core';
 import { FlickityDirective } from '../flickity/flickity.directive';
-export declare class FlickityChildDirective implements OnInit {
+export declare class FlickityChildDirective implements AfterContentInit {
     private el;
     private parent;
     flickityChild: any;
     constructor(el: ElementRef, parent?: FlickityDirective);
-    ngOnInit(): void;
+    ngAfterContentInit(): void;
 }
